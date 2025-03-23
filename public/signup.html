@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chicle&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation Bar Starts -->
+    <nav id="navbar" class="flex items-center justify-between px-10 lg:px-16 py-6 w-full bg-white">
+        <div id="logo" class="lg:text-4xl text-3xl font-bold text-black cursor-pointer font-[Chicle]">
+            <a href="home.html">SwiftHealth</a>
+        </div>
+        
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex lg:flex text-black md:text-[17px] lg:text-[18px] lg:gap-x-7 md:gap-1">
+            <div class="hover:text-blue-500 duration-200 cursor-pointer p-1"><a href="home.html">Home</a></div>
+            <div class="hover:text-blue-500 duration-200 cursor-pointer p-1"><a href="aboutus.html">About Us</a></div>
+            <div class="hover:text-blue-500 duration-200 cursor-pointer p-1"><a href="services.html">Services</a></div>
+            <div class="hover:text-blue-500 duration-200 cursor-pointer p-1"><a href="ContactUs.html">Contact Us</a></div>
+            <div class="hover:text-blue-500 duration-200 cursor-pointer p-1"><a href="login.html">Log In</a></div>
+        </div>
+
+        <div class="hidden md:block">
+            <button class="bg-blue-500 text-white hover:bg-black py-3 px-5 rounded-full font-bold">
+                <a href="bookappointment.html">Book Appointment</a>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-3xl">&#9776;</button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white text-black flex flex-col items-center justify-center text-xl space-y-6 transform -translate-y-full transition-transform duration-500 ease-in-out">
+        <button id="close-btn" class="absolute top-5 right-6 text-3xl">&#10006;</button>
+        <a href="home.html" class="hover:text-blue-500">Home</a>
+        <a href="aboutus.html" class="hover:text-blue-500">About Us</a>
+        <a href="services.html" class="hover:text-blue-500">Services</a>
+        <a href="ContactUs.html" class="hover:text-blue-500">Contact Us</a>
+        <a href="login.html" class="hover:text-blue-500">Sign Up / Log In</a>
+        <div class="bg-blue-500 text-white hover:bg-blue-950 cursor-pointer px-4 py-3 text-sm font-bold rounded-full">
+            <a href="bookappointment.html">Book Appointment</a>
+        </div>
+    </div>
+
+    <!-- Navigation Ends-->
+
+    <!-- Loader element -->
+    <div id="loader-element" class="loader fixed inset-0 flex items-center justify-center z-50 bg-black/50 flex-col gap-5 hidden">
+        <div class="w-17 h-17 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+        <p class="text-white text-2xl">Please wait!</p>
+    </div>
+
+
+    <div class="h-screen flex justify-center items-center">
+
+        <div class="lg:w-2/3 lg:mx-auto lg:h-4/5 h-screen w-9/10 flex lg:flex-row flex-col mt-5">
+            <div
+                class="flex flex-col justify-around p-10 rounded-xl bg-[url(https://products.ls.graphics/mesh-gradients/images/38.-Sky-Blue_1.jpg)] bg-cover bg-center lg:w-1/2 lg:h-full h-1/4">
+                <div id="logo" class="text-white lg:text-5xl text-4xl font-bold text-black font-[Chicle]">SwiftHealth
+                </div>
+                <div>
+                    <h1 class="text-white font-bold text-xl lg:text-5xl">Your Healthcare Assistant Awaits !</h1>
+                </div>
+            </div>
+
+            <div class="p-10 shadow-xl lg:w-1/2 lg:h-full flex justify-evenly flex-col gap-3 rounded-xl bg-white">
+                <h1 class="lg:text-5xl text-3xl font-extrabold">Sign Up</h1>
+                <p class="text-gray-500">Welcome! Please register your account.</p>
+                <input id="name-input" type="text" placeholder="Name" class="p-3 border border-gray-500 rounded-lg">
+                <input id="email-input" type="email" placeholder="E-mail Address" class="p-3 border border-gray-500 rounded-lg">
+                <input id="password-input" type="password" placeholder="Password" class="p-3 border border-gray-500 rounded-lg">
+                <button id="signupbtn" type="submit"
+                    class="bg-blue-700 w-1/2 mx-auto p-3 text-white rounded-xl cursor-pointer hover:bg-blue-800 duration-250">Sign
+                    Up</button>
+                <p class="text-center">Already have an account?<a class="ms-2 text-blue-500"
+                        href="./login.html">Login</a></p>
+                <div class="relative flex flex-row items-center justify-center gap-3">
+                    <hr class="w-full border-gray-300">
+                    <span>OR</span>
+                    <hr class="w-full border-gray-300">
+                </div>
+                <p class="p-3 text-center border border-gray-500 rounded-lg"><i
+                        class="fa-brands fa-google text-red-500"></i> Sign Up with Google</p>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="./js/signup.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
